@@ -11,28 +11,20 @@
         android:layout_height="match_parent"
         android:layout_marginTop="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_marginBottom="140dp"/>
+        />
 
 
 
-    <EditText
-        android:id="@+id/maintxt"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Enter your Notes"
-        android:textAlignment="center"
-        app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_marginBottom="80dp"
-        android:layout_marginLeft="30dp"
-        android:layout_marginRight="30dp"/>
+
 
         <Button
             android:id="@+id/submit"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@id/maintxt"
-            android:layout_margin="25dp"
-            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:background="@drawable/rect"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_margin="15dp"
+            android:elevation="10dp"
             app:layout_constraintRight_toRightOf="parent"
-            android:text="Submit"/>
+            android:text="+"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CreateNoteActivity">
+
+    <EditText
+        android:id="@+id/maintxt"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="Title"
+        android:textAlignment="gravity"
+        android:padding="10dp"
+        android:gravity="start"
+        android:textStyle="bold"
+        android:background="@drawable/rect"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="80dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"/>
+
+    <EditText
+        android:id="@+id/Note"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@drawable/rect"
+        android:hint="Note"
+        android:padding="10dp"
+        android:textAlignment="gravity"
+        app:layout_constraintTop_toBottomOf="@id/maintxt"
+        android:layout_marginTop="25dp"
+        android:gravity="start"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"/>
+
+
+    <Button
+        android:id="@+id/submit1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/Note"
+        android:layout_margin="25dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:text="Submit"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

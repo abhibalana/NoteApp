@@ -7,4 +7,7 @@ class NoteRepository(private val noteDao: NoteDao) {
         noteDao.insertNote(note)
     }
     val allNotes :LiveData<List<Note>> = noteDao.getAllNotes()
+    suspend fun deleteNot(note: Note){
+        noteDao.deleteNote(note)
+    }
 }
