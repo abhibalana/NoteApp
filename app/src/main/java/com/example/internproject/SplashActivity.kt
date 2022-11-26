@@ -14,26 +14,11 @@ class SplashActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash)
         supportActionBar!!.hide()
-        animationViewSplash.playAnimation()
-        animationViewSplash.addAnimatorListener(object : Animator.AnimatorListener {
-            override fun onAnimationStart(animation: Animator?) {
-            }
+        Handler().postDelayed( {
+            startActivity(Intent(this@SplashActivity, LoginActivity::class.java))
+            finish()
+        },3000)
 
-            override fun onAnimationEnd(animation: Animator?) {
 
-                    startActivity(Intent(this@SplashActivity,LoginActivity::class.java))
-                finish()
-
-            }
-
-            override fun onAnimationCancel(animation: Animator?) {
-
-            }
-
-            override fun onAnimationRepeat(animation: Animator?) {
-
-            }
-
-        })
     }
 }

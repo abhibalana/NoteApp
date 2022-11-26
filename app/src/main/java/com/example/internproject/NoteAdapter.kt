@@ -61,4 +61,5 @@ val text = itemView.findViewById<TextView>(R.id.layoutText)
 interface noteRVAdapter{
     fun onItemClicked(note:Note)
     fun onNoteClick(note:Note)
+
 }

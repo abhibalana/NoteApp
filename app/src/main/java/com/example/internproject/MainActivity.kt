@@ -94,23 +94,42 @@ class MainActivity : AppCompatActivity(), noteRVAdapter {
                 openNewsPaper()
                 return true
             }
+            R.id.about ->{
+                openAbout()
+                return true
+            }
             else -> super.onOptionsItemSelected(item)
         }
     }
 
+    private fun openAbout(){
+        startActivity(Intent(this,AboutActivity::class.java))
+    }
+
     private fun openNewsPaper() {
-  startActivity(Intent(this,NewsActivity::class.java))
+      val intent=  Intent(this,NewsActivity::class.java)
+        intent.putExtra("userid",id)
+  startActivity(intent)
     }
 
     override fun onItemClicked(note: Note) {
-        showdialog("Enter Email to delete",note,false)
+        showdialog("Enter Email to delete", note, false)
 
 
     }
 
     override fun onNoteClick(note: Note){
+        if(note.encrypt) {
+            showdialog("Enter Email to decrypt message",note,true)
+        }
+        else{
+            val intent = Intent(this, NoteReadActivity::class.java)
+            intent.putExtra("title", note.title)
+            intent.putExtra("note", note.Note)
+            intent.putExtra("encrypt",note.encrypt)
+            startActivity(intent)
+        }
 
-        showdialog("Enter Email to decrypt message",note,true)
 
 
     }
@@ -134,6 +153,7 @@ class MainActivity : AppCompatActivity(), noteRVAdapter {
                 val intent = Intent(this, NoteReadActivity::class.java)
                 intent.putExtra("title", note.title)
                 intent.putExtra("note", note.Note)
+                intent.putExtra("encrypt",note.encrypt)
                 startActivity(intent)
             }
             else{

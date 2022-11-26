@@ -1,35 +1,90 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fullview"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".NoteReadActivity">
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
     <TextView
-        android:id="@+id/readmaintxt"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:textAlignment="gravity"
-        android:padding="10dp"
-        android:gravity="start"
-        android:textStyle="bold"
-        android:background="@drawable/rect"
+        android:id="@+id/tit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/readmaintxt"
         app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="80dp"
-        android:layout_marginLeft="30dp"
-        android:layout_marginRight="30dp"/>
-
+        android:text="Title"
+        android:layout_margin="10dp"
+        android:layout_marginTop="30dp"
+        android:textStyle="bold"
+        android:fontFamily="sans-serif-black"
+        android:textColor="@color/purple_700"
+        android:padding="10dp"/>
+            <TextView
+                android:id="@+id/readmaintxt"
+                app:layout_constraintTop_toBottomOf="@id/tit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:textSize="22sp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="sans-serif-black"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/rect"
+                android:backgroundTint="#fff"
+                android:elevation="10dp"
+                android:padding="20dp"
+                android:textColor="@color/purple_700"
+                android:textStyle="bold"
+                />
     <TextView
-        android:id="@+id/readNote"
-        android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:background="@drawable/rect"
-        android:padding="10dp"
-        android:textAlignment="gravity"
+        android:id="@+id/notee"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@id/readmaintxt"
-        android:layout_marginTop="25dp"
-        android:gravity="start"
-        android:layout_marginLeft="30dp"
-        android:layout_marginRight="30dp"/>
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:text="Note"
+        android:layout_margin="10dp"
+        android:layout_marginTop="30dp"
+        android:textStyle="bold"
+        android:fontFamily="sans-serif-black"
+        android:textColor="@color/purple_700"
+        android:padding="10dp"/>
+            <TextView
+                android:id="@+id/readNote"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/notee"
+                android:textSize="16sp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:padding="20dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/rect"
+                android:elevation="10dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:textColor="@color/black"
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+                />
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/shareButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="5dp"
+        android:src="@drawable/ic_baseline_share_24"
+        android:backgroundTint="@color/purple_700"/>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+

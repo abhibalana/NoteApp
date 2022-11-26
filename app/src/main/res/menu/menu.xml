@@ -1,17 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
-    <item androd="@+id/aboutActivity"
+    <item android:id="@+id/about"
         android:title="About"
         />
     <item android:id="@+id/logout"
         android:title="logout" />
 
 
-    <item android:id="@+id/search"
-        android:title="search"
-        android:icon="@drawable/ic_baseline_search_24"
-        app:showAsAction="always"/>
+
     <item android:id="@+id/newsPaper"
         android:title="newspaper"
         android:icon="@drawable/ic_baseline_newspaper_24"

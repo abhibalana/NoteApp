@@ -29,11 +29,13 @@ class CreateNoteActivity : AppCompatActivity() {
             val note = Note.text.toString()
                  note1 = encryptPassword.encrypt(note)
             if(title.isNotEmpty()&&note1.isNotEmpty()){
-                val note = Note(currentDate,title,note1,id.toInt())
+                val note = Note(currentDate,title,note1,id.toInt(),true)
                 viewModel.insertNote(note)
                 finish()
             }
             
         }
     }
+
+
 }
