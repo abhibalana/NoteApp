@@ -90,7 +90,7 @@ class NewsActivity : AppCompatActivity(), NewsItemInterface, onCounrtryClick {
 
     }
     fun makeRequest(country:String){
-        val Url = "https://newsapi.org/v2/top-headlines?country=$country&apiKey=7b6541d01c664fe99a396931de736e24&pageSize=20"
+        val Url = "https://newsapi.org/v2/top-headlines?country=$country&apiKey=replacewithyourid&pageSize=20"
         val client = OkHttpClient()
         val request = okhttp3.Request.Builder().url(Url).build()
         client.newCall(request).enqueue(object : Callback{
